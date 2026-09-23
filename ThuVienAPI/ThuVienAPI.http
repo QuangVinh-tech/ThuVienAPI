@@ -1,0 +1,6 @@
+@ThuVienAPI_HostAddress = http://localhost:5212
+
+GET {{ThuVienAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
