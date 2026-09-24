@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ThuVienAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9a0470029a5416240d2a0deecd3e46c285077b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b9531f523595c096f821252747d6b728dbc1b41")]
 [assembly: System.Reflection.AssemblyProductAttribute("ThuVienAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ThuVienAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

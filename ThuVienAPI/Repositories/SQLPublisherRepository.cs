@@ -1,4 +1,5 @@
-﻿using WebAPI_simple.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using WebAPI_simple.Data;
 using WebAPI_simple.Models.Domain;
 using WebAPI_simple.Models.DTO;
 
@@ -72,6 +73,27 @@ namespace WebAPI_simple.Repositories
                 _dbContext.SaveChanges();
             }
             return null;
+        }
+
+        public PublisherWithBooksDTO? GetBooksByPublisherId(int id)
+        {
+            var publisherDomain = _dbContext.Publishers
+                .Include(p => p.Books)
+                .FirstOrDefault(p => p.Id == id);
+
+            if (publisherDomain == null)
+            {
+                return null;
+            }
+
+            var result = new PublisherWithBooksDTO
+            {
+                Id = publisherDomain.Id,
+                Name = publisherDomain.Name,
+                BookTitles = publisherDomain.Books.Select(b => b.Title).ToList()
+            };
+
+            return result;
         }
     }
 }

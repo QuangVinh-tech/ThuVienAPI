@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\controllers\\publisherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\controllers\\publisherscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\repositories\\ipublisherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\repositories\\ipublisherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\models\\dto\\addpublisherrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\models\\dto\\addpublisherrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\models\\dto\\publisherdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,16 +27,24 @@
       "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\repositories\\sqlauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\repositories\\iauthorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\models\\dto\\addauthorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\models\\dto\\addauthorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\models\\dto\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\models\\dto\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\models\\dto\\addpublisherrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\models\\dto\\addpublisherrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\models\\dto\\addauthorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|solutionrelative:thuvienapi\\models\\dto\\addauthorrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF42907B-CC17-4CBB-9979-76E26957656B}|ThuVienAPI\\ThuVienAPI.csproj|c:\\users\\asus\\source\\repos\\thuvienapi\\thuvienapi\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,46 +98,124 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "AuthorsController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Controllers\\AuthorsController.cs",
+              "RelativeDocumentMoniker": "ThuVienAPI\\Controllers\\AuthorsController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Controllers\\AuthorsController.cs",
+              "RelativeToolTip": "ThuVienAPI\\Controllers\\AuthorsController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T07:45:30.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PublishersController.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Controllers\\PublishersController.cs",
               "RelativeDocumentMoniker": "ThuVienAPI\\Controllers\\PublishersController.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Controllers\\PublishersController.cs",
               "RelativeToolTip": "ThuVienAPI\\Controllers\\PublishersController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAmwDYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwD8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-24T08:50:49.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SQLPublisherRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\SQLPublisherRepository.cs",
-              "RelativeDocumentMoniker": "ThuVienAPI\\Repositories\\SQLPublisherRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\SQLPublisherRepository.cs",
-              "RelativeToolTip": "ThuVienAPI\\Repositories\\SQLPublisherRepository.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAmwEwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "PublisherDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\PublisherDTO.cs",
+              "RelativeDocumentMoniker": "ThuVienAPI\\Models\\DTO\\PublisherDTO.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\PublisherDTO.cs",
+              "RelativeToolTip": "ThuVienAPI\\Models\\DTO\\PublisherDTO.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwB4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T08:50:34.723Z",
+              "WhenOpened": "2026-09-24T08:49:40.651Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "IPublisherRepository.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\IPublisherRepository.cs",
               "RelativeDocumentMoniker": "ThuVienAPI\\Repositories\\IPublisherRepository.cs",
               "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\IPublisherRepository.cs",
               "RelativeToolTip": "ThuVienAPI\\Repositories\\IPublisherRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-24T08:50:13.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "SQLPublisherRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\SQLPublisherRepository.cs",
+              "RelativeDocumentMoniker": "ThuVienAPI\\Repositories\\SQLPublisherRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\SQLPublisherRepository.cs",
+              "RelativeToolTip": "ThuVienAPI\\Repositories\\SQLPublisherRepository.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAgwGAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T08:50:34.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SQLAuthorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\SQLAuthorRepository.cs",
+              "RelativeDocumentMoniker": "ThuVienAPI\\Repositories\\SQLAuthorRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\SQLAuthorRepository.cs",
+              "RelativeToolTip": "ThuVienAPI\\Repositories\\SQLAuthorRepository.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAkwGMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T07:45:01.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ThuVienAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Program.cs",
+              "RelativeToolTip": "ThuVienAPI\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T07:33:20.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAuthorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\IAuthorRepository.cs",
+              "RelativeDocumentMoniker": "ThuVienAPI\\Repositories\\IAuthorRepository.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\IAuthorRepository.cs",
+              "RelativeToolTip": "ThuVienAPI\\Repositories\\IAuthorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T07:44:48.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthorDTO.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\AuthorDTO.cs",
+              "RelativeDocumentMoniker": "ThuVienAPI\\Models\\DTO\\AuthorDTO.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\AuthorDTO.cs",
+              "RelativeToolTip": "ThuVienAPI\\Models\\DTO\\AuthorDTO.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T07:44:00.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AddPublisherRequestDTO.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\AddPublisherRequestDTO.cs",
               "RelativeDocumentMoniker": "ThuVienAPI\\Models\\DTO\\AddPublisherRequestDTO.cs",
@@ -145,77 +223,11 @@
               "RelativeToolTip": "ThuVienAPI\\Models\\DTO\\AddPublisherRequestDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T08:49:57.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-24T08:49:57.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Program.cs",
-              "RelativeDocumentMoniker": "ThuVienAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Program.cs",
-              "RelativeToolTip": "ThuVienAPI\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T07:33:20.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PublisherDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\PublisherDTO.cs",
-              "RelativeDocumentMoniker": "ThuVienAPI\\Models\\DTO\\PublisherDTO.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\PublisherDTO.cs",
-              "RelativeToolTip": "ThuVienAPI\\Models\\DTO\\PublisherDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T08:49:40.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthorsController.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Controllers\\AuthorsController.cs",
-              "RelativeDocumentMoniker": "ThuVienAPI\\Controllers\\AuthorsController.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Controllers\\AuthorsController.cs",
-              "RelativeToolTip": "ThuVienAPI\\Controllers\\AuthorsController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwDYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:45:30.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SQLAuthorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\SQLAuthorRepository.cs",
-              "RelativeDocumentMoniker": "ThuVienAPI\\Repositories\\SQLAuthorRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\SQLAuthorRepository.cs",
-              "RelativeToolTip": "ThuVienAPI\\Repositories\\SQLAuthorRepository.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAmwEwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:45:01.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IAuthorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\IAuthorRepository.cs",
-              "RelativeDocumentMoniker": "ThuVienAPI\\Repositories\\IAuthorRepository.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Repositories\\IAuthorRepository.cs",
-              "RelativeToolTip": "ThuVienAPI\\Repositories\\IAuthorRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:44:48.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AddAuthorRequestDTO.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\AddAuthorRequestDTO.cs",
               "RelativeDocumentMoniker": "ThuVienAPI\\Models\\DTO\\AddAuthorRequestDTO.cs",
@@ -223,21 +235,7 @@
               "RelativeToolTip": "ThuVienAPI\\Models\\DTO\\AddAuthorRequestDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:44:33.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthorDTO.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\AuthorDTO.cs",
-              "RelativeDocumentMoniker": "ThuVienAPI\\Models\\DTO\\AuthorDTO.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\ThuVienAPI\\ThuVienAPI\\Models\\DTO\\AuthorDTO.cs",
-              "RelativeToolTip": "ThuVienAPI\\Models\\DTO\\AuthorDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-24T07:44:00.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-24T07:44:33.998Z"
             },
             {
               "$type": "Document",

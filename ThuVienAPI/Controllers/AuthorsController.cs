@@ -51,5 +51,16 @@ namespace WebAPI_simple.Controllers
             var authorDelete = _authorRepository.DeleteAuthorById(id);
             return Ok();
         }
+
+        [HttpGet("{id}/books")]
+        public IActionResult GetBooksByAuthorId(int id)
+        {
+            var result = _authorRepository.GetBooksByAuthorId(id);
+            if (result == null)
+            {
+                return NotFound(new { message = "Không tìm thấy tác giả" });
+            }
+            return Ok(result);
+        }
     }
 }

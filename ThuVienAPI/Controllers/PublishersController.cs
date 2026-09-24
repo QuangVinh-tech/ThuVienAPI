@@ -51,5 +51,16 @@ namespace WebAPI_simple.Controllers
             var publisherDelete = _publisherRepository.DeletePublisherById(id);
             return Ok();
         }
+
+        [HttpGet("{id}/books")]
+        public IActionResult GetBooksByPublisherId(int id)
+        {
+            var result = _publisherRepository.GetBooksByPublisherId(id);
+            if (result == null)
+            {
+                return NotFound(new { message = "Không tìm thấy NXB" });
+            }
+            return Ok(result);
+        }
     }
 }
