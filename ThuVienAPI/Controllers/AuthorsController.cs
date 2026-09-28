@@ -17,18 +17,15 @@ namespace WebAPI_simple.Controllers
             _authorRepository = authorRepository;
         }
 
-        [HttpGet("get-all-author")]
-        public IActionResult GetAllAuthor()
-        {
-            var allAuthors = _authorRepository.GellAllAuthors();
-            return Ok(allAuthors);
-        }
+            
 
-        [HttpGet("get-author-by-id/{id}")]
-        public IActionResult GetAuthorById(int id)
+        [HttpGet("get-all-author")]
+        public IActionResult GetAllAuthor([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
+      [FromQuery] string? sortBy, [FromQuery] bool isAscending = true,
+      [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
         {
-            var authorWithId = _authorRepository.GetAuthorById(id);
-            return Ok(authorWithId);
+            var allAuthors = _authorRepository.GellAllAuthors(filterOn, filterQuery, sortBy, isAscending, pageNumber, pageSize);
+            return Ok(allAuthors);
         }
 
         [HttpPost("add-author")]

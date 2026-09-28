@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 using WebAPI_simple.Data;
 using WebAPI_simple.Models.Domain;
 using WebAPI_simple.Models.DTO;
@@ -13,7 +14,8 @@ namespace WebAPI_simple.Repositories
             _dbContext = dbContext;
         }
 
-        public List<BookWithAuthorAndPublisherDTO> GetAllBooks()
+        public List<BookWithAuthorAndPublisherDTO> GetAllBooks(string? filterOn = null, string? filterQuery = null,
+     string? sortBy = null, bool isAscending = true, int pageNumber = 1, int pageSize = 1000)
         {
             var allBooks = _dbContext.Books.Select(Books => new BookWithAuthorAndPublisherDTO()
             {
@@ -27,8 +29,59 @@ namespace WebAPI_simple.Repositories
                 CoverUrl = Books.CoverUrl,
                 PublisherName = Books.Publisher.Name,
                 AuthorNames = Books.Book_Authors.Select(n => n.Author.FullName).ToList()
-            }).ToList();
-            return allBooks;
+            }).AsQueryable();
+
+            
+            if (string.IsNullOrWhiteSpace(filterOn) == false && string.IsNullOrWhiteSpace(filterQuery) == false)
+            {
+                if (filterOn.Equals("title", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = allBooks.Where(x => x.Title.Contains(filterQuery));
+                }
+                else if (filterOn.Equals("description", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = allBooks.Where(x => x.Description != null && x.Description.Contains(filterQuery));
+                }
+                else if (filterOn.Equals("genre", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = allBooks.Where(x => x.Genre != null && x.Genre.Contains(filterQuery));
+                }
+                else if (filterOn.Equals("publisherName", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = allBooks.Where(x => x.PublisherName.Contains(filterQuery));
+                }
+                else if (filterOn.Equals("rate", StringComparison.OrdinalIgnoreCase))
+                {
+                    if (int.TryParse(filterQuery, out int rate))
+                    {
+                        allBooks = allBooks.Where(x => x.Rate == rate);
+                    }
+                }
+            }
+
+            
+            if (string.IsNullOrWhiteSpace(sortBy) == false)
+            {
+                if (sortBy.Equals("title", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = isAscending ? allBooks.OrderBy(x => x.Title) : allBooks.OrderByDescending(x => x.Title);
+                }
+                else if (sortBy.Equals("rate", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = isAscending ? allBooks.OrderBy(x => x.Rate) : allBooks.OrderByDescending(x => x.Rate);
+                }
+                else if (sortBy.Equals("genre", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = isAscending ? allBooks.OrderBy(x => x.Genre) : allBooks.OrderByDescending(x => x.Genre);
+                }
+                else if (sortBy.Equals("publisherName", StringComparison.OrdinalIgnoreCase))
+                {
+                    allBooks = isAscending ? allBooks.OrderBy(x => x.PublisherName) : allBooks.OrderByDescending(x => x.PublisherName);
+                }
+            }
+
+            var skipResults = (pageNumber - 1) * pageSize;
+            return allBooks.Skip(skipResults).Take(pageSize).ToList();
         }
 
         public BookWithAuthorAndPublisherDTO GetBookById(int id)
@@ -131,5 +184,6 @@ namespace WebAPI_simple.Repositories
             }
             return bookDomain;
         }
+        
     }
 }

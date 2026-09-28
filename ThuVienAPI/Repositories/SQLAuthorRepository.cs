@@ -13,19 +13,40 @@ namespace WebAPI_simple.Repositories
             _dbContext = dbContext;
         }
 
-        public List<AuthorDTO> GellAllAuthors()
+        public List<AuthorDTO> GellAllAuthors(string? filterOn = null, string? filterQuery = null,
+      string? sortBy = null, bool isAscending = true, int pageNumber = 1, int pageSize = 1000)
         {
-            var allAuthorsDomain = _dbContext.Authors.ToList();
-            var allAuthorDTO = new List<AuthorDTO>();
-            foreach (var authorDomain in allAuthorsDomain)
+            var allAuthors = _dbContext.Authors.Select(a => new AuthorDTO()
             {
-                allAuthorDTO.Add(new AuthorDTO()
+                Id = a.Id,
+                FullName = a.FullName
+            }).AsQueryable();
+
+            
+            if (string.IsNullOrWhiteSpace(filterOn) == false && string.IsNullOrWhiteSpace(filterQuery) == false)
+            {
+                if (filterOn.Equals("fullName", StringComparison.OrdinalIgnoreCase))
                 {
-                    Id = authorDomain.Id,
-                    FullName = authorDomain.FullName
-                });
+                    allAuthors = allAuthors.Where(x => x.FullName.Contains(filterQuery));
+                }
             }
-            return allAuthorDTO;
+
+            
+            if (string.IsNullOrWhiteSpace(sortBy) == false)
+            {
+                if (sortBy.Equals("fullName", StringComparison.OrdinalIgnoreCase))
+                {
+                    allAuthors = isAscending ? allAuthors.OrderBy(x => x.FullName) : allAuthors.OrderByDescending(x => x.FullName);
+                }
+                else if (sortBy.Equals("id", StringComparison.OrdinalIgnoreCase))
+                {
+                    allAuthors = isAscending ? allAuthors.OrderBy(x => x.Id) : allAuthors.OrderByDescending(x => x.Id);
+                }
+            }
+
+            
+            var skipResults = (pageNumber - 1) * pageSize;
+            return allAuthors.Skip(skipResults).Take(pageSize).ToList();
         }
 
         public AuthorNoIdDTO GetAuthorById(int id)
