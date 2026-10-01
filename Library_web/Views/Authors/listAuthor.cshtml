@@ -1,0 +1,7 @@
+﻿@model Library_web.Models.DTO.authorDTO
+<div class="container mt-4" style="max-width: 500px;">
+    <h2>Thông tin tác giả</h2>
+    <p><strong>Id:</strong> @Model.Id</p>
+    <p><strong>Họ tên:</strong> @Model.FullName</p>
+    <a asp-controller="Authors" asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</div>

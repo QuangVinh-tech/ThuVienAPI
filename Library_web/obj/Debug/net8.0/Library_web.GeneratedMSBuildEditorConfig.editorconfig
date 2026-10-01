@@ -18,6 +18,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ASUS\source\repos\ThuVienAPI\Library_web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Authors/addAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xhZGRBdXRob3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Authors/editAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xlZGl0QXV0aG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Authors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Authors/listAuthor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xsaXN0QXV0aG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Books/addBook.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcYWRkQm9vay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +52,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Publishers/addPublisher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGVyc1xhZGRQdWJsaXNoZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Publishers/editPublisher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGVyc1xlZGl0UHVibGlzaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Publishers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Publishers/listPublisher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGlzaGVyc1xsaXN0UHVibGlzaGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS/source/repos/ThuVienAPI/Library_web/Views/Shared/Error.cshtml]

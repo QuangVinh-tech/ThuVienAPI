@@ -1,0 +1,21 @@
+﻿@{
+    var author = ViewBag.Author;
+    var id = ViewBag.Id;
+}
+<div class="container mt-4" style="max-width: 500px;">
+    <h2>Sửa tác giả</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <form asp-controller="Authors" asp-action="editAuthor" asp-route-id="@id" method="POST">
+        <div class="mb-3">
+            <label class="form-label">Họ tên</label>
+            <input type="text" class="form-control" name="FullName" value="@author.FullName" />
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <a asp-controller="Authors" asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

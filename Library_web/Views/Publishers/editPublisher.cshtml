@@ -1,0 +1,21 @@
+﻿@{
+    var publisher = ViewBag.Publisher;
+    var id = ViewBag.Id;
+}
+<div class="container mt-4" style="max-width: 500px;">
+    <h2>Sửa nhà xuất bản</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <form asp-controller="Publishers" asp-action="editPublisher" asp-route-id="@id" method="POST">
+        <div class="mb-3">
+            <label class="form-label">Tên NXB</label>
+            <input type="text" class="form-control" name="Name" value="@publisher.Name" />
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <a asp-controller="Publishers" asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

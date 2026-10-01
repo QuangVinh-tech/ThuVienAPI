@@ -1,0 +1,7 @@
+﻿@model Library_web.Models.DTO.publisherDTO
+<div class="container mt-4" style="max-width: 500px;">
+    <h2>Thông tin nhà xuất bản</h2>
+    <p><strong>Id:</strong> @Model.Id</p>
+    <p><strong>Tên:</strong> @Model.Name</p>
+    <a asp-controller="Publishers" asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</div>

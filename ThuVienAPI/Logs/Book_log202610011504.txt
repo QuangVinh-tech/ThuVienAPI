@@ -1,0 +1,26 @@
+2026-10-01 15:04:12.912 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 15:04:13.186 +07:00 [INF] Now listening on: https://localhost:7177
+2026-10-01 15:04:13.187 +07:00 [INF] Now listening on: http://localhost:5212
+2026-10-01 15:04:13.265 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 15:04:13.266 +07:00 [INF] Hosting environment: Development
+2026-10-01 15:04:13.267 +07:00 [INF] Content root path: C:\Users\ASUS\source\repos\ThuVienAPI\ThuVienAPI
+2026-10-01 15:04:13.912 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_vs/browserLink - null null
+2026-10-01 15:04:13.912 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-01 15:04:13.945 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 33.1606ms
+2026-10-01 15:04:13.990 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.9032ms
+2026-10-01 15:04:14.050 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - null null
+2026-10-01 15:04:14.199 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 149.0318ms
+2026-10-01 15:04:34.387 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Authors/get-all-author - null null
+2026-10-01 15:04:34.491 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI)'
+2026-10-01 15:04:34.524 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.AuthorsController (ThuVienAPI).
+2026-10-01 15:04:35.439 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 15:04:35.440 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 15:04:35.868 +07:00 [INF] Executed DbCommand (42ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-10-01 15:04:35.902 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.AuthorDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 15:04:35.922 +07:00 [INF] Executed action WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI) in 1391.3986ms
+2026-10-01 15:04:35.925 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI)'
+2026-10-01 15:04:35.934 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Authors/get-all-author - 200 null application/json; charset=utf-8 1546.5489ms

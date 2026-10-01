@@ -1,0 +1,18 @@
+﻿@model Library_web.Models.DTO.addAuthorDTO
+<div class="container mt-4" style="max-width: 500px;">
+    <h2>Thêm tác giả</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <form asp-controller="Authors" asp-action="addAuthor" method="POST">
+        <div class="mb-3">
+            <label class="form-label">Họ tên</label>
+            <input type="text" class="form-control" name="FullName" />
+        </div>
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <a asp-controller="Authors" asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </form>
+</div>

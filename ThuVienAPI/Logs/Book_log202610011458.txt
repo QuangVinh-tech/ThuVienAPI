@@ -1,0 +1,157 @@
+2026-10-01 14:58:11.962 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/api/Books/get-all-books?filterOn=id&sortBy=id&isAscending=false&pageNumber=-1&pageSize=100 - null null
+2026-10-01 14:58:11.998 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:58:11.999 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.BooksController (ThuVienAPI).
+2026-10-01 14:58:12.002 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-01 14:58:12.003 +07:00 [WRN] This is a warning log
+2026-10-01 14:58:12.003 +07:00 [ERR] This is a error log
+2026-10-01 14:58:12.026 +07:00 [INF] Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2026-10-01 14:58:12.129 +07:00 [ERR] An exception occurred while iterating over the results of a query for context type 'WebAPI_simple.Data.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:a069ec7f-204b-4e28-a51e-313ad056e64d
+Error Number:10742,State:1,Class:15
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:a069ec7f-204b-4e28-a51e-313ad056e64d
+Error Number:10742,State:1,Class:15
+2026-10-01 14:58:12.211 +07:00 [INF] Executed action WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI) in 209.3943ms
+2026-10-01 14:58:12.252 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:58:12.327 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): The offset specified in a OFFSET clause may not be negative.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at WebAPI_simple.Repositories.SQLBookRepository.GetAllBooks(String filterOn, String filterQuery, String sortBy, Boolean isAscending, Int32 pageNumber, Int32 pageSize) in C:\Users\ASUS\source\repos\ThuVienAPI\ThuVienAPI\Repositories\SQLBookRepository.cs:line 84
+   at WebAPI_simple.Controllers.BooksController.GetAll(String filterOn, String filterQuery, String sortBy, Boolean isAscending, Int32 pageNumber, Int32 pageSize) in C:\Users\ASUS\source\repos\ThuVienAPI\ThuVienAPI\Controllers\BooksController.cs:line 35
+   at lambda_method137(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:a069ec7f-204b-4e28-a51e-313ad056e64d
+Error Number:10742,State:1,Class:15
+2026-10-01 14:58:12.357 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/api/Books/get-all-books?filterOn=id&sortBy=id&isAscending=false&pageNumber=-1&pageSize=100 - 500 null text/plain; charset=utf-8 394.6209ms
+2026-10-01 14:58:19.591 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/api/Books/get-all-books?filterOn=id&sortBy=id&isAscending=false&pageNumber=1&pageSize=100 - null null
+2026-10-01 14:58:19.594 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:58:19.595 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.BooksController (ThuVienAPI).
+2026-10-01 14:58:19.598 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-01 14:58:19.599 +07:00 [WRN] This is a warning log
+2026-10-01 14:58:19.600 +07:00 [ERR] This is a error log
+2026-10-01 14:58:19.605 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2026-10-01 14:58:19.607 +07:00 [INF] Finished GetAllBook request with data [{"Id":2,"Title":"Cho t\u00F4i xin m\u1ED9t v\u00E9 \u0111i tu\u1ED5i th\u01A1","Description":"Ti\u1EC3u thuy\u1EBFt v\u1EC1 tu\u1ED5i th\u01A1","IsRead":true,"DateRead":"2026-09-24T07:34:02.183","Rate":0,"Genre":"V\u0103n h\u1ECDc","CoverUrl":"","DateAdded":"0001-01-01T00:00:00","PublisherName":"NXB Kim \u0110\u1ED3ng","AuthorNames":["Nguy\u1EC5n Nh\u1EADt \u00C1nh"]},{"Id":3,"Title":"Cho t\u00F4i xin m\u1ED9t v\u00E9 \u0111i tu\u1ED5i th\u01A1","Description":"Ti\u1EC3u thuy\u1EBFt v\u1EC1 tu\u1ED5i th\u01A1","IsRead":true,"DateRead":"2026-09-24T00:00:00","Rate":5,"Genre":"V\u0103n h\u1ECDc","CoverUrl":"","DateAdded":"0001-01-01T00:00:00","PublisherName":"NXB Kim \u0110\u1ED3ng","AuthorNames":["Nguy\u1EC5n Nh\u1EADt \u00C1nh"]}]
+2026-10-01 14:58:19.608 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.BookWithAuthorAndPublisherDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:58:19.610 +07:00 [INF] Executed action WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI) in 12.1143ms
+2026-10-01 14:58:19.611 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:58:19.612 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/api/Books/get-all-books?filterOn=id&sortBy=id&isAscending=false&pageNumber=1&pageSize=100 - 200 null application/json; charset=utf-8 21.0779ms
+2026-10-01 14:58:57.317 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/api/Books/get-all-books?filterOn=id&sortBy=id&isAscending=false&pageNumber=2&pageSize=100 - null null
+2026-10-01 14:58:57.326 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:58:57.326 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.BooksController (ThuVienAPI).
+2026-10-01 14:58:57.329 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-01 14:58:57.329 +07:00 [WRN] This is a warning log
+2026-10-01 14:58:57.330 +07:00 [ERR] This is a error log
+2026-10-01 14:58:57.333 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:58:57.333 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:58:57.355 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_0 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2026-10-01 14:58:57.357 +07:00 [INF] Finished GetAllBook request with data []
+2026-10-01 14:58:57.358 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.BookWithAuthorAndPublisherDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:58:57.359 +07:00 [INF] Executed action WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI) in 31.031ms
+2026-10-01 14:58:57.361 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:58:57.362 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/api/Books/get-all-books?filterOn=id&sortBy=id&isAscending=false&pageNumber=2&pageSize=100 - 200 null application/json; charset=utf-8 44.4164ms

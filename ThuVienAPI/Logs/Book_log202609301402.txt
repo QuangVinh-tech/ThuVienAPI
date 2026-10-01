@@ -1,5 +1,0 @@
-2026-09-30 14:02:34.842 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/api/Books/get-book-by-id/3 - null null
-2026-09-30 14:02:34.853 +07:00 [INF] Authorization failed. These requirements were not met:
-RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
-2026-09-30 14:02:34.854 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
-2026-09-30 14:02:34.855 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/api/Books/get-book-by-id/3 - 403 0 null 13.4283ms

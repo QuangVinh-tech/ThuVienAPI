@@ -5,4 +5,14 @@
         public int Id { get; set; }
         public string FullName { get; set; }
     }
+
+    public class authorNoIdDTO
+    {
+        public string FullName { get; set; }
+    }
+
+    public class addAuthorDTO
+    {
+        public string FullName { get; set; }
+    }
 }

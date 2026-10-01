@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Library_web.Models.DTO.authorDTO>
+<div class="container mt-4">
+    <h2 class="mb-4">Danh sách tác giả</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <a asp-controller="Authors" asp-action="addAuthor" class="btn btn-primary mb-3">Thêm tác giả</a>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Họ tên</th>
+            <th>Chi tiết</th>
+            <th>Sửa</th>
+            <th>Xóa</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FullName</td>
+                <td><a asp-controller="Authors" asp-action="listAuthor" asp-route-id="@item.Id">Chi tiết</a></td>
+                <td><a asp-controller="Authors" asp-action="editAuthor" asp-route-id="@item.Id">Sửa</a></td>
+                <td><a asp-controller="Authors" asp-action="delAuthor" asp-route-id="@item.Id" onclick="return confirm('Xác nhận xóa?')">Xóa</a></td>
+            </tr>
+        }
+    </table>
+</div>
