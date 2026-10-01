@@ -1,0 +1,106 @@
+2026-10-01 14:27:14.483 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 14:27:14.699 +07:00 [INF] Now listening on: https://localhost:7177
+2026-10-01 14:27:14.701 +07:00 [INF] Now listening on: http://localhost:5212
+2026-10-01 14:27:14.789 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 14:27:14.791 +07:00 [INF] Hosting environment: Development
+2026-10-01 14:27:14.792 +07:00 [INF] Content root path: C:\Users\ASUS\source\repos\ThuVienAPI\ThuVienAPI
+2026-10-01 14:27:15.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_vs/browserLink - null null
+2026-10-01 14:27:15.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-01 14:27:15.522 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 39.9695ms
+2026-10-01 14:27:15.561 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_vs/browserLink - 200 null text/javascript; charset=UTF-8 80.4045ms
+2026-10-01 14:27:15.597 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - null null
+2026-10-01 14:27:15.722 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 125.4578ms
+2026-10-01 14:27:18.993 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-01 14:27:19.062 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:27:19.085 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.BooksController (ThuVienAPI).
+2026-10-01 14:27:19.236 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-01 14:27:19.237 +07:00 [WRN] This is a warning log
+2026-10-01 14:27:19.238 +07:00 [ERR] This is a error log
+2026-10-01 14:27:20.041 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:27:20.043 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:27:20.623 +07:00 [INF] Executed DbCommand (54ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2026-10-01 14:27:20.666 +07:00 [INF] Finished GetAllBook request with data [{"Id":2,"Title":"Cho t\u00F4i xin m\u1ED9t v\u00E9 \u0111i tu\u1ED5i th\u01A1","Description":"Ti\u1EC3u thuy\u1EBFt v\u1EC1 tu\u1ED5i th\u01A1","IsRead":true,"DateRead":"2026-09-24T07:34:02.183","Rate":0,"Genre":"V\u0103n h\u1ECDc","CoverUrl":"","DateAdded":"0001-01-01T00:00:00","PublisherName":"NXB Kim \u0110\u1ED3ng","AuthorNames":["Nguy\u1EC5n Nh\u1EADt \u00C1nh"]},{"Id":3,"Title":"Cho t\u00F4i xin m\u1ED9t v\u00E9 \u0111i tu\u1ED5i th\u01A1","Description":"Ti\u1EC3u thuy\u1EBFt v\u1EC1 tu\u1ED5i th\u01A1","IsRead":true,"DateRead":"2026-09-24T00:00:00","Rate":5,"Genre":"V\u0103n h\u1ECDc","CoverUrl":"","DateAdded":"0001-01-01T00:00:00","PublisherName":"NXB Kim \u0110\u1ED3ng","AuthorNames":["Nguy\u1EC5n Nh\u1EADt \u00C1nh"]}]
+2026-10-01 14:27:20.674 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.BookWithAuthorAndPublisherDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:27:20.683 +07:00 [INF] Executed action WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI) in 1592.1574ms
+2026-10-01 14:27:20.685 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:27:20.693 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 1699.3606ms
+2026-10-01 14:27:22.163 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Authors/get-all-author - null null
+2026-10-01 14:27:22.169 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI)'
+2026-10-01 14:27:22.173 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.AuthorsController (ThuVienAPI).
+2026-10-01 14:27:22.195 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:27:22.196 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:27:22.204 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-10-01 14:27:22.207 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.AuthorDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:27:22.210 +07:00 [INF] Executed action WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI) in 34.8744ms
+2026-10-01 14:27:22.212 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI)'
+2026-10-01 14:27:22.214 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Authors/get-all-author - 200 null application/json; charset=utf-8 50.4823ms
+2026-10-01 14:27:22.327 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Publishers/get-all-publisher - null null
+2026-10-01 14:27:22.332 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.PublishersController.GetAllPublisher (ThuVienAPI)'
+2026-10-01 14:27:22.335 +07:00 [INF] Route matched with {action = "GetAllPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublisher(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.PublishersController (ThuVienAPI).
+2026-10-01 14:27:22.395 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:27:22.396 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:27:22.401 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-10-01 14:27:22.405 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.PublisherDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:27:22.408 +07:00 [INF] Executed action WebAPI_simple.Controllers.PublishersController.GetAllPublisher (ThuVienAPI) in 70.3281ms
+2026-10-01 14:27:22.409 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.PublishersController.GetAllPublisher (ThuVienAPI)'
+2026-10-01 14:27:22.411 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Publishers/get-all-publisher - 200 null application/json; charset=utf-8 84.1588ms
+2026-10-01 14:27:46.557 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-01 14:27:46.561 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:27:46.563 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.BooksController (ThuVienAPI).
+2026-10-01 14:27:46.565 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-01 14:27:46.566 +07:00 [WRN] This is a warning log
+2026-10-01 14:27:46.566 +07:00 [ERR] This is a error log
+2026-10-01 14:27:46.583 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2026-10-01 14:27:46.586 +07:00 [INF] Finished GetAllBook request with data [{"Id":2,"Title":"Cho t\u00F4i xin m\u1ED9t v\u00E9 \u0111i tu\u1ED5i th\u01A1","Description":"Ti\u1EC3u thuy\u1EBFt v\u1EC1 tu\u1ED5i th\u01A1","IsRead":true,"DateRead":"2026-09-24T07:34:02.183","Rate":0,"Genre":"V\u0103n h\u1ECDc","CoverUrl":"","DateAdded":"0001-01-01T00:00:00","PublisherName":"NXB Kim \u0110\u1ED3ng","AuthorNames":["Nguy\u1EC5n Nh\u1EADt \u00C1nh"]},{"Id":3,"Title":"Cho t\u00F4i xin m\u1ED9t v\u00E9 \u0111i tu\u1ED5i th\u01A1","Description":"Ti\u1EC3u thuy\u1EBFt v\u1EC1 tu\u1ED5i th\u01A1","IsRead":true,"DateRead":"2026-09-24T00:00:00","Rate":5,"Genre":"V\u0103n h\u1ECDc","CoverUrl":"","DateAdded":"0001-01-01T00:00:00","PublisherName":"NXB Kim \u0110\u1ED3ng","AuthorNames":["Nguy\u1EC5n Nh\u1EADt \u00C1nh"]}]
+2026-10-01 14:27:46.587 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.BookWithAuthorAndPublisherDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:27:46.589 +07:00 [INF] Executed action WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI) in 24.6926ms
+2026-10-01 14:27:46.590 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:27:46.591 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 34.3336ms

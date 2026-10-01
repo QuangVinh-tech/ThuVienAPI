@@ -1,0 +1,88 @@
+﻿@model Library_web.Models.DTO.addBookDTO
+@{
+    var listAuthor = ViewBag.listAuthor;
+    var listPublisher = ViewBag.listPublisher;
+}
+
+<div class="container mt-4" style="max-width: 600px;">
+    <h2 class="mb-4">Add book</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+
+    <form asp-controller="Books" asp-action="addBook" method="POST">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" class="form-control" name="title" asp-for="title" />
+            <span asp-validation-for="title" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" name="description" asp-for="description" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label d-block">Is Read</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="isRead" asp-for="isRead" value="True" id="isReadYes" />
+                <label class="form-check-label" for="isReadYes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="isRead" asp-for="isRead" value="False" id="isReadNo" />
+                <label class="form-check-label" for="isReadNo">No</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Date Read</label>
+                <input type="date" class="form-control" name="dateRead" asp-for="dateRead" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Date Added</label>
+                <input type="date" class="form-control" name="dateAdded" asp-for="dateAdded" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Rate (0-5)</label>
+                <input type="number" class="form-control" name="rate" asp-for="rate" min="0" max="5" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label">Genre</label>
+                <input type="text" class="form-control" name="genre" asp-for="genre" />
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Cover Url</label>
+            <input type="text" class="form-control" name="coverUrl" asp-for="coverUrl" placeholder="https://..." />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Publisher</label>
+            <select name="publisherID" class="form-select">
+                @foreach (var item in listPublisher)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Author <small class="text-muted">(giữ Ctrl để chọn nhiều)</small></label>
+            <select name="authorIds" class="form-select" multiple size="5">
+                @foreach (var item in listAuthor)
+                {
+                    <option value="@item.Id">@item.FullName</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a asp-controller="Books" asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </form>

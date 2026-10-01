@@ -23,7 +23,7 @@ namespace WebAPI_simple.Controllers
         }
 
         [HttpGet("get-all-books")]
-        [Authorize(Roles = "Read")]
+       //[Authorize(Roles = "Read")]
         public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
             [FromQuery] string? sortBy, [FromQuery] bool isAscending,
             [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
@@ -40,7 +40,7 @@ namespace WebAPI_simple.Controllers
 
         [HttpGet]
         [Route("get-book-by-id/{id}")]
-        [Authorize(Roles = "Read")]
+       // [Authorize(Roles = "Read")]
         public IActionResult GetBookById([FromRoute] int id)
         {
             var bookWithIdDTO = _bookRepository.GetBookById(id);

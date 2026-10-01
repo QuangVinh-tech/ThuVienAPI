@@ -1,0 +1,12 @@
+2026-10-01 14:16:46.258 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 14:16:46.508 +07:00 [INF] Now listening on: https://localhost:7177
+2026-10-01 14:16:46.510 +07:00 [INF] Now listening on: http://localhost:5212
+2026-10-01 14:16:46.590 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 14:16:46.591 +07:00 [INF] Hosting environment: Development
+2026-10-01 14:16:46.592 +07:00 [INF] Content root path: C:\Users\ASUS\source\repos\ThuVienAPI\ThuVienAPI
+2026-10-01 14:16:47.596 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_vs/browserLink - null null
+2026-10-01 14:16:47.596 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-01 14:16:47.667 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 72.3161ms
+2026-10-01 14:16:47.819 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_vs/browserLink - 200 null text/javascript; charset=UTF-8 225.7688ms
+2026-10-01 14:16:47.851 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - null null
+2026-10-01 14:16:47.982 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.4601ms

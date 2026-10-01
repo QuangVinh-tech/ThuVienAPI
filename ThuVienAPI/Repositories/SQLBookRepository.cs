@@ -87,7 +87,6 @@ namespace WebAPI_simple.Repositories
         public BookWithAuthorAndPublisherDTO GetBookById(int id)
         {
             var bookWithDomain = _dbContext.Books.Where(n => n.Id == id);
-            
             var bookWithIdDTO = bookWithDomain.Select(book => new BookWithAuthorAndPublisherDTO()
             {
                 Id = book.Id,
@@ -99,7 +98,7 @@ namespace WebAPI_simple.Repositories
                 Genre = book.Genre,
                 CoverUrl = book.CoverUrl,
                 PublisherName = book.Publisher.Name,
-                AuthorNames = book.Book_Authors.Select(n => n.Author.FullName).ToList()
+                AuthorNames = book.Book_Authors.Select(n => n.Author.FullName).ToList() ?? new List<string>()
             }).FirstOrDefault();
             return bookWithIdDTO;
         }

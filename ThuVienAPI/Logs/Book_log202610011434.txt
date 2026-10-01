@@ -1,0 +1,51 @@
+2026-10-01 14:34:45.073 +07:00 [INF] User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-01 14:34:45.292 +07:00 [INF] Now listening on: https://localhost:7177
+2026-10-01 14:34:45.294 +07:00 [INF] Now listening on: http://localhost:5212
+2026-10-01 14:34:45.382 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-01 14:34:45.383 +07:00 [INF] Hosting environment: Development
+2026-10-01 14:34:45.384 +07:00 [INF] Content root path: C:\Users\ASUS\source\repos\ThuVienAPI\ThuVienAPI
+2026-10-01 14:34:46.179 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_vs/browserLink - null null
+2026-10-01 14:34:46.179 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-01 14:34:46.209 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 30.4182ms
+2026-10-01 14:34:46.237 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.7337ms
+2026-10-01 14:34:46.266 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - null null
+2026-10-01 14:34:46.398 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 131.8481ms
+2026-10-01 14:34:50.450 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - null null
+2026-10-01 14:34:50.524 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:34:50.551 +07:00 [INF] Route matched with {action = "GetAll", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.BooksController (ThuVienAPI).
+2026-10-01 14:34:50.728 +07:00 [INF] GetAll Book Action method was invoked
+2026-10-01 14:34:50.729 +07:00 [WRN] This is a warning log
+2026-10-01 14:34:50.730 +07:00 [ERR] This is a error log
+2026-10-01 14:34:51.437 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:34:51.439 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:34:51.902 +07:00 [INF] Executed DbCommand (44ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Title], [t].[Description], [t].[IsRead], CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[DateRead]
+    ELSE NULL
+END, CASE
+    WHEN [t].[IsRead] = CAST(1 AS bit) THEN [t].[Rate]
+    ELSE NULL
+END, [t].[Genre], [t].[CoverUrl], [p].[Name], [p].[Id], [t0].[FullName], [t0].[Id], [t0].[Id0]
+FROM (
+    SELECT [b].[Id], [b].[CoverUrl], [b].[DateRead], [b].[Description], [b].[Genre], [b].[IsRead], [b].[PublisherID], [b].[Rate], [b].[Title]
+    FROM [Books] AS [b]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Publishers] AS [p] ON [t].[PublisherID] = [p].[Id]
+LEFT JOIN (
+    SELECT [a].[FullName], [b0].[Id], [a].[Id] AS [Id0], [b0].[BookId]
+    FROM [Books_Authors] AS [b0]
+    INNER JOIN [Authors] AS [a] ON [b0].[AuthorId] = [a].[Id]
+) AS [t0] ON [t].[Id] = [t0].[BookId]
+ORDER BY [t].[Id], [p].[Id], [t0].[Id]
+2026-10-01 14:34:51.945 +07:00 [INF] Finished GetAllBook request with data [{"Id":2,"Title":"Cho t\u00F4i xin m\u1ED9t v\u00E9 \u0111i tu\u1ED5i th\u01A1","Description":"Ti\u1EC3u thuy\u1EBFt v\u1EC1 tu\u1ED5i th\u01A1","IsRead":true,"DateRead":"2026-09-24T07:34:02.183","Rate":0,"Genre":"V\u0103n h\u1ECDc","CoverUrl":"","DateAdded":"0001-01-01T00:00:00","PublisherName":"NXB Kim \u0110\u1ED3ng","AuthorNames":["Nguy\u1EC5n Nh\u1EADt \u00C1nh"]},{"Id":3,"Title":"Cho t\u00F4i xin m\u1ED9t v\u00E9 \u0111i tu\u1ED5i th\u01A1","Description":"Ti\u1EC3u thuy\u1EBFt v\u1EC1 tu\u1ED5i th\u01A1","IsRead":true,"DateRead":"2026-09-24T00:00:00","Rate":5,"Genre":"V\u0103n h\u1ECDc","CoverUrl":"","DateAdded":"0001-01-01T00:00:00","PublisherName":"NXB Kim \u0110\u1ED3ng","AuthorNames":["Nguy\u1EC5n Nh\u1EADt \u00C1nh"]}]
+2026-10-01 14:34:51.954 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.BookWithAuthorAndPublisherDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:34:51.963 +07:00 [INF] Executed action WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI) in 1406.616ms
+2026-10-01 14:34:51.964 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.BooksController.GetAll (ThuVienAPI)'
+2026-10-01 14:34:51.973 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Books/get-all-books?filterOn=&filterQuery=&sortBy=&isAscending=True - 200 null application/json; charset=utf-8 1522.198ms
+2026-10-01 14:34:53.642 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Books/get-book-by-id/2 - null null
+2026-10-01 14:34:53.652 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-01 14:34:53.658 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 14:34:53.659 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Books/get-book-by-id/2 - 401 0 null 17.0401ms

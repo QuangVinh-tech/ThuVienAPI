@@ -1,0 +1,16 @@
+2026-10-01 14:19:16.567 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Books/get-all-books - null null
+2026-10-01 14:19:16.636 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-01 14:19:16.641 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 14:19:16.649 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Books/get-all-books - 401 0 null 81.4653ms
+2026-10-01 14:19:41.849 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-01 14:19:41.853 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/_vs/browserLink - null null
+2026-10-01 14:19:41.858 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 8.4005ms
+2026-10-01 14:19:41.887 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.0135ms
+2026-10-01 14:19:41.907 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - null null
+2026-10-01 14:19:41.923 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.8266ms
+2026-10-01 14:19:50.841 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/api/Books/get-all-books?pageNumber=1&pageSize=100 - null null
+2026-10-01 14:19:50.848 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-10-01 14:19:50.849 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-01 14:19:50.850 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/api/Books/get-all-books?pageNumber=1&pageSize=100 - 401 0 null 9.4262ms

@@ -1,0 +1,28 @@
+2026-10-01 14:26:11.351 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Authors/get-all-author - null null
+2026-10-01 14:26:11.365 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI)'
+2026-10-01 14:26:11.370 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.AuthorsController (ThuVienAPI).
+2026-10-01 14:26:11.389 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:26:11.390 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:26:11.397 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-10-01 14:26:11.400 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.AuthorDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:26:11.403 +07:00 [INF] Executed action WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI) in 30.5774ms
+2026-10-01 14:26:11.404 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.AuthorsController.GetAllAuthor (ThuVienAPI)'
+2026-10-01 14:26:11.405 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Authors/get-all-author - 200 null application/json; charset=utf-8 54.5325ms
+2026-10-01 14:26:11.540 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7177/api/Publishers/get-all-publisher - null null
+2026-10-01 14:26:11.544 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.PublishersController.GetAllPublisher (ThuVienAPI)'
+2026-10-01 14:26:11.546 +07:00 [INF] Route matched with {action = "GetAllPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublisher(System.String, System.String, System.String, Boolean, Int32, Int32) on controller WebAPI_simple.Controllers.PublishersController (ThuVienAPI).
+2026-10-01 14:26:11.599 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:26:11.600 +07:00 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2026-10-01 14:26:11.605 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+ORDER BY (SELECT 1)
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2026-10-01 14:26:11.607 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebAPI_simple.Models.DTO.PublisherDTO, ThuVienAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-01 14:26:11.609 +07:00 [INF] Executed action WebAPI_simple.Controllers.PublishersController.GetAllPublisher (ThuVienAPI) in 60.8079ms
+2026-10-01 14:26:11.610 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.PublishersController.GetAllPublisher (ThuVienAPI)'
+2026-10-01 14:26:11.611 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7177/api/Publishers/get-all-publisher - 200 null application/json; charset=utf-8 71.8205ms

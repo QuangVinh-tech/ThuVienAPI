@@ -1,0 +1,11 @@
+2026-10-01 14:09:00.070 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/api/Images/Download?id=1 - null null
+2026-10-01 14:09:00.082 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.ImagesController.DownloadImage (ThuVienAPI)'
+2026-10-01 14:09:00.084 +07:00 [INF] Route matched with {action = "DownloadImage", controller = "Images"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DownloadImage(Int32) on controller WebAPI_simple.Controllers.ImagesController (ThuVienAPI).
+2026-10-01 14:09:00.093 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[FileDescription], [i].[FileExtension], [i].[FileName], [i].[FilePath], [i].[FileSizeInBytes]
+FROM [Images] AS [i]
+WHERE [i].[Id] = @__Id_0
+2026-10-01 14:09:00.097 +07:00 [INF] Executing FileContentResult, sending file with download name 'Cô Nương.jpg' ...
+2026-10-01 14:09:00.103 +07:00 [INF] Executed action WebAPI_simple.Controllers.ImagesController.DownloadImage (ThuVienAPI) in 16.1824ms
+2026-10-01 14:09:00.104 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.ImagesController.DownloadImage (ThuVienAPI)'
+2026-10-01 14:09:00.105 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/api/Images/Download?id=1 - 200 209838 application/octet-stream 35.6488ms
