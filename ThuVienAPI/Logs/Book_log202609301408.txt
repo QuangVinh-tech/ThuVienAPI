@@ -1,0 +1,5 @@
+2026-09-30 14:08:05.172 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - null null
+2026-09-30 14:08:05.267 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 95.3476ms
+2026-09-30 14:08:05.287 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/favicon.ico - null null
+2026-09-30 14:08:05.353 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/favicon.ico - 404 0 null 66.8282ms
+2026-09-30 14:08:05.360 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7177/favicon.ico, Response status code: 404

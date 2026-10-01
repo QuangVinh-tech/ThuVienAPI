@@ -1,0 +1,5 @@
+2026-09-30 14:01:04.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7177/api/Books/get-all-books?filterOn=fullName&filterQuery=vinh&pageNumber=1&pageSize=100 - null null
+2026-09-30 14:01:04.787 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Read)
+2026-09-30 14:01:04.788 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-09-30 14:01:04.789 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7177/api/Books/get-all-books?filterOn=fullName&filterQuery=vinh&pageNumber=1&pageSize=100 - 403 0 null 7.3255ms

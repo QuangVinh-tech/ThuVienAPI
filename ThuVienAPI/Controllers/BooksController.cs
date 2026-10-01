@@ -13,32 +13,43 @@ namespace WebAPI_simple.Controllers
     {
         private readonly AppDbContext _dbContext;
         private readonly IBookRepository _bookRepository;
-        public BooksController(AppDbContext dbContext, IBookRepository bookRepository)
+        private readonly ILogger<BooksController> _logger;
+
+        public BooksController(AppDbContext dbContext, IBookRepository bookRepository, ILogger<BooksController> logger)
         {
             _dbContext = dbContext;
             _bookRepository = bookRepository;
+            _logger = logger;
         }
 
-       [HttpGet("get-all-books")]
-public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
-    [FromQuery] string? sortBy, [FromQuery] bool isAscending,
-    [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
-{
-    var allBooks = _bookRepository.GetAllBooks(filterOn, filterQuery, sortBy, isAscending, pageNumber, pageSize);
-    return Ok(allBooks);
-}
+        [HttpGet("get-all-books")]
+        [Authorize(Roles = "Read")]
+        public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery,
+            [FromQuery] string? sortBy, [FromQuery] bool isAscending,
+            [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 100)
+        {
+            _logger.LogInformation("GetAll Book Action method was invoked");
+            _logger.LogWarning("This is a warning log");
+            _logger.LogError("This is a error log");
+
+            var allBooks = _bookRepository.GetAllBooks(filterOn, filterQuery, sortBy, isAscending, pageNumber, pageSize);
+
+            _logger.LogInformation($"Finished GetAllBook request with data {System.Text.Json.JsonSerializer.Serialize(allBooks)}");
+            return Ok(allBooks);
+        }
+
         [HttpGet]
         [Route("get-book-by-id/{id}")]
+        [Authorize(Roles = "Read")]
         public IActionResult GetBookById([FromRoute] int id)
         {
             var bookWithIdDTO = _bookRepository.GetBookById(id);
             return Ok(bookWithIdDTO);
         }
 
-      
         [HttpPost("add-book")]
         [ValidateModel]
-        //[Authorize(Roles = "Write")]
+        [Authorize(Roles = "Write")]
         public IActionResult AddBook([FromBody] AddBookRequestDTO addBookRequestDTO)
         {
             if (ModelState.IsValid)
@@ -50,6 +61,7 @@ public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? fi
         }
 
         [HttpPut("update-book-by-id/{id}")]
+        [Authorize(Roles = "Write")]
         public IActionResult UpdateBookById(int id, [FromBody] AddBookRequestDTO bookDTO)
         {
             var updateBook = _bookRepository.UpdateBookById(id, bookDTO);
@@ -57,11 +69,17 @@ public IActionResult GetAll([FromQuery] string? filterOn, [FromQuery] string? fi
         }
 
         [HttpDelete("delete-book-by-id/{id}")]
+        [Authorize(Roles = "Write")]
         public IActionResult DeleteBookById(int id)
         {
             var deleteBook = _bookRepository.DeleteBookById(id);
+            if (deleteBook == null)
+            {
+                return NotFound(new { message = "Không tìm thấy sách" });
+            }
             return Ok(deleteBook);
         }
+
         #region Private methods
         private bool ValidateAddBook(AddBookRequestDTO addBookRequestDTO)
         {
